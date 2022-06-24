@@ -13,6 +13,8 @@
 		9186A954286623EC005B2BCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9186A952286623EC005B2BCE /* Main.storyboard */; };
 		9186A956286623F1005B2BCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9186A955286623F1005B2BCE /* Assets.xcassets */; };
 		9186A959286623F1005B2BCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9186A957286623F1005B2BCE /* LaunchScreen.storyboard */; };
+		9186A966286666A8005B2BCE /* CitiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9186A965286666A8005B2BCE /* CitiesViewModel.swift */; };
+		9186A96828666743005B2BCE /* Cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9186A96728666743005B2BCE /* Cities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		9186A955286623F1005B2BCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9186A958286623F1005B2BCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9186A95A286623F1005B2BCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9186A965286666A8005B2BCE /* CitiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesViewModel.swift; sourceTree = "<group>"; };
+		9186A96728666743005B2BCE /* Cities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,57 @@
 		9186A94B286623EC005B2BCE /* WeatherReport */ = {
 			isa = PBXGroup;
 			children = (
-				9186A94C286623EC005B2BCE /* AppDelegate.swift */,
-				9186A94E286623EC005B2BCE /* SceneDelegate.swift */,
-				9186A950286623EC005B2BCE /* ViewController.swift */,
+				9186A96028662401005B2BCE /* API Service */,
+				9186A963286633DA005B2BCE /* ViewModels */,
+				9186A96228662422005B2BCE /* Models */,
+				9186A96128662413005B2BCE /* Common */,
+				9186A9642866665A005B2BCE /* View Controllers */,
 				9186A952286623EC005B2BCE /* Main.storyboard */,
 				9186A955286623F1005B2BCE /* Assets.xcassets */,
 				9186A957286623F1005B2BCE /* LaunchScreen.storyboard */,
 				9186A95A286623F1005B2BCE /* Info.plist */,
 			);
 			path = WeatherReport;
+			sourceTree = "<group>";
+		};
+		9186A96028662401005B2BCE /* API Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "API Service";
+			sourceTree = "<group>";
+		};
+		9186A96128662413005B2BCE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9186A94C286623EC005B2BCE /* AppDelegate.swift */,
+				9186A94E286623EC005B2BCE /* SceneDelegate.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		9186A96228662422005B2BCE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9186A96728666743005B2BCE /* Cities.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9186A963286633DA005B2BCE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9186A965286666A8005B2BCE /* CitiesViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9186A9642866665A005B2BCE /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9186A950286623EC005B2BCE /* ViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +185,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9186A951286623EC005B2BCE /* ViewController.swift in Sources */,
+				9186A96828666743005B2BCE /* Cities.swift in Sources */,
+				9186A966286666A8005B2BCE /* CitiesViewModel.swift in Sources */,
 				9186A94D286623EC005B2BCE /* AppDelegate.swift in Sources */,
 				9186A94F286623EC005B2BCE /* SceneDelegate.swift in Sources */,
 			);
