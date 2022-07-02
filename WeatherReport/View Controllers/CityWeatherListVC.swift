@@ -46,7 +46,6 @@ class CityWeatherListVC: UIViewController {
 extension CityWeatherListVC: UITableViewDataSource {
   //MARK: - UITableViewDataSource
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//    10
     citiesViewModel.cityWeatherList.count
   }
   
@@ -60,7 +59,9 @@ extension CityWeatherListVC: UITableViewDataSource {
 extension CityWeatherListVC: UITableViewDelegate {
   // MARK: - UITableViewDelegate
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    self.citiesViewModel.selectedItem(indexPath: indexPath)
+    if let id = citiesViewModel.selectedItemId(indexPath: indexPath) {
+      //TODO: call VC with forecast and put into nav stack
+    }
   }
 }
 

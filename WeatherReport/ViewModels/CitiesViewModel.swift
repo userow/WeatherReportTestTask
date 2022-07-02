@@ -48,10 +48,12 @@ class CitiesViewModel: NSObject {
   }
   
   
-  func selectedItem(indexPath: IndexPath) {
+  func selectedItemId(indexPath: IndexPath) -> Int?{
+    var result: Int? = nil
     if indexPath.row >= 0 && indexPath.row < cityWeatherList.count {
-      cityWeatherList[indexPath.row].overrideFullyLoaded = !cityWeatherList[indexPath.row].overrideFullyLoaded
+      result = citiesList[indexPath.row].id
     }
+    return result
   }
   
   //MARK: - private - processing
@@ -72,7 +74,7 @@ class CitiesViewModel: NSObject {
         if let getWeather = getWeather, let weather = getWeather.weather.first {
           let cityWeather = CityWeather(id: city.id,
                                         name: getWeather.name,
-                                        weatherDetail: weather.weatherDescription, // + " " + getWeather.name, //TODO: temp for test - remove
+                                        weatherDetail: weather.weatherDescription,ы
                                         weatherImageIcon: weather.icon,
                                         maxTemp: "\(getWeather.main.tempMax) ºC",
                                         minTemp: "\(getWeather.main.tempMin) ºC")
