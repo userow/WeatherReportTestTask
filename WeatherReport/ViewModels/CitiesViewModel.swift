@@ -74,7 +74,7 @@ class CitiesViewModel: NSObject {
         if let getWeather = getWeather, let weather = getWeather.weather.first {
           let cityWeather = CityWeather(id: city.id,
                                         name: getWeather.name,
-                                        weatherDetail: weather.weatherDescription,ы
+                                        weatherDetail: weather.weatherDescription,
                                         weatherImageIcon: weather.icon,
                                         maxTemp: "\(getWeather.main.tempMax) ºC",
                                         minTemp: "\(getWeather.main.tempMin) ºC")
